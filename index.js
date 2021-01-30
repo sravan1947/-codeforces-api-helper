@@ -7,6 +7,7 @@ const usersRouter=require('./routes/users');
 const codeforcesRouter=require('./routes/codeforces');
 const config=require('./config')
 var passport = require('passport');
+const url = 'mongodb://localhost:27017/cpt';
 const port = process.env.PORT || 3000
 const app=express();
 const server=http.createServer(app);
