@@ -29,8 +29,7 @@ app.post('/lll',(req,res)=>
     res.json(req.body);
 }
 );
-
-app.use(authenticate.verifyUser,(req, res, next) => {
+/*app.use(authenticate.verifyUser,(req, res, next) => {
     console.log(req.user);
 
     if (!req.user) {
@@ -41,7 +40,9 @@ app.use(authenticate.verifyUser,(req, res, next) => {
     else {
           next();
     }
-})
+})*/
+app.get('/', (req, res) => res.sendFile(__dirname+'/index.html'))
+
 
 server.listen(port,()=>
 {
