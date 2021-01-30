@@ -1,0 +1,1094 @@
+http://127.0.0.1:3000/users/signup  (post req)
+
+input:
+{
+	"username":"abc",
+	"password":"pwd"
+}
+output:
+{
+    "success": true,
+    "status": "Registration Successful!"
+}
+if error then
+{
+    "err": {
+        "name": "UserExistsError",
+        "message": "A user with the given username is already registered"
+    }
+}
+====================================================================
+http://127.0.0.1:3000/users/login  (post req)
+
+input:
+{
+	"username":"abc",
+	"password":"pwd"
+}
+
+output:
+{
+    "success": true,
+    "status": "Login Successful!",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFiYyIsImlhdCI6MTU5MTM3OTgwMywiZXhwIjoxNjI3Mzc5ODAzfQ.MPdkLmhHAhjhcpyeQpe3Rxn61FZdRERXJlWBC8HZO2o"
+}
+
+if error then
+
+{
+    "success": false,
+    "status": "Login Unsuccessful!",
+    "err": {
+        "name": "IncorrectPasswordError",
+        "message": "Password or username is incorrect"
+    }
+}
+
+======================================================
+http://127.0.0.1:3000/users/update   (post req)
+
+input:
+
+{
+	"codeforces":"codeforces_id"
+}
+
+output:
+{
+    "success": true,
+    "user": {
+        "admin": false,
+        "codeforces_handle": "codeforces_id",
+        "_id": "5eda86d927566e07ee2c1c66",
+        "username": "abc",
+        "__v": 0
+    }
+}
+
+=========================================================================
+http://127.0.0.1:3000/codeforces   (post req)
+
+input:
+{
+	"codeforces":"syed_1"
+}
+
+output:
+
+{
+    "success": true,
+    "info": [
+        {
+            "lastName": "TAHA MOHIUDDIN",
+            "country": "India",
+            "lastOnlineTimeSeconds": 1591265669,
+            "rating": 1434,
+            "friendOfCount": 1,
+            "titlePhoto": "//userpic.codeforces.com/no-title.jpg",
+            "handle": "syed_1",
+            "avatar": "//userpic.codeforces.com/no-avatar.jpg",
+            "firstName": "SYED",
+            "contribution": 0,
+            "organization": "CMRCET",
+            "rank": "specialist",
+            "maxRating": 1434,
+            "registrationTimeSeconds": 1565500835,
+            "maxRank": "specialist"
+        }
+    ],
+    "rating": [
+        {
+            "contestId": 1294,
+            "contestName": "Codeforces Round #615 (Div. 3)",
+            "handle": "syed_1",
+            "rank": 5293,
+            "ratingUpdateTimeSeconds": 1579711500,
+            "oldRating": 0,
+            "newRating": 1434
+        }
+    ],
+    "submissions": [
+        {
+            "id": 69364304,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579710903,
+            "relativeTimeSeconds": 7203,
+            "problem": {
+                "contestId": 1294,
+                "index": "C",
+                "name": "Product of Three Numbers",
+                "type": "PROGRAMMING",
+                "rating": 1300,
+                "tags": [
+                    "greedy",
+                    "math",
+                    "number theory"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "TIME_LIMIT_EXCEEDED",
+            "testset": "TESTS",
+            "passedTestCount": 6,
+            "timeConsumedMillis": 2000,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 69359593,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579710098,
+            "relativeTimeSeconds": 6398,
+            "problem": {
+                "contestId": 1294,
+                "index": "C",
+                "name": "Product of Three Numbers",
+                "type": "PROGRAMMING",
+                "rating": 1300,
+                "tags": [
+                    "greedy",
+                    "math",
+                    "number theory"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 69357287,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579709668,
+            "relativeTimeSeconds": 5968,
+            "problem": {
+                "contestId": 1294,
+                "index": "C",
+                "name": "Product of Three Numbers",
+                "type": "PROGRAMMING",
+                "rating": 1300,
+                "tags": [
+                    "greedy",
+                    "math",
+                    "number theory"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 69355520,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579709345,
+            "relativeTimeSeconds": 5645,
+            "problem": {
+                "contestId": 1294,
+                "index": "C",
+                "name": "Product of Three Numbers",
+                "type": "PROGRAMMING",
+                "rating": 1300,
+                "tags": [
+                    "greedy",
+                    "math",
+                    "number theory"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 69349040,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579708288,
+            "relativeTimeSeconds": 4588,
+            "problem": {
+                "contestId": 1294,
+                "index": "B",
+                "name": "Collecting Packages",
+                "type": "PROGRAMMING",
+                "rating": 1200,
+                "tags": [
+                    "implementation",
+                    "sortings"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 13,
+            "timeConsumedMillis": 62,
+            "memoryConsumedBytes": 204800
+        },
+        {
+            "id": 69342324,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579707351,
+            "relativeTimeSeconds": 3651,
+            "problem": {
+                "contestId": 1294,
+                "index": "B",
+                "name": "Collecting Packages",
+                "type": "PROGRAMMING",
+                "rating": 1200,
+                "tags": [
+                    "implementation",
+                    "sortings"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 2,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 204800
+        },
+        {
+            "id": 69322025,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579705148,
+            "relativeTimeSeconds": 1448,
+            "problem": {
+                "contestId": 1294,
+                "index": "A",
+                "name": "Collecting Coins",
+                "type": "PROGRAMMING",
+                "rating": 800,
+                "tags": [
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 62,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 69314098,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579704495,
+            "relativeTimeSeconds": 795,
+            "problem": {
+                "contestId": 1294,
+                "index": "A",
+                "name": "Collecting Coins",
+                "type": "PROGRAMMING",
+                "rating": 800,
+                "tags": [
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 6,
+            "timeConsumedMillis": 108,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 69306591,
+            "contestId": 1294,
+            "creationTimeSeconds": 1579704038,
+            "relativeTimeSeconds": 338,
+            "problem": {
+                "contestId": 1294,
+                "index": "A",
+                "name": "Collecting Coins",
+                "type": "PROGRAMMING",
+                "rating": 800,
+                "tags": [
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1294,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "CONTESTANT",
+                "ghost": false,
+                "startTimeSeconds": 1579703700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 61,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 67946698,
+            "contestId": 1270,
+            "creationTimeSeconds": 1577684527,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1270,
+                "index": "B",
+                "name": "Interesting Subarray",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 1200,
+                "tags": [
+                    "constructive algorithms",
+                    "greedy",
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1270,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1577628300
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 46,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59670508,
+            "contestId": 1206,
+            "creationTimeSeconds": 1567093872,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1206,
+                "index": "B",
+                "name": "Make Product Equal One",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 900,
+                "tags": [
+                    "dp",
+                    "implementation"
+                ]
+            },
+            "author": {
+                "contestId": 1206,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566135900
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 36,
+            "timeConsumedMillis": 202,
+            "memoryConsumedBytes": 409600
+        },
+        {
+            "id": 59669902,
+            "contestId": 1206,
+            "creationTimeSeconds": 1567092987,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1206,
+                "index": "B",
+                "name": "Make Product Equal One",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 900,
+                "tags": [
+                    "dp",
+                    "implementation"
+                ]
+            },
+            "author": {
+                "contestId": 1206,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566135900
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 3,
+            "timeConsumedMillis": 30,
+            "memoryConsumedBytes": 409600
+        },
+        {
+            "id": 59669727,
+            "contestId": 1206,
+            "creationTimeSeconds": 1567092728,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1206,
+                "index": "B",
+                "name": "Make Product Equal One",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 900,
+                "tags": [
+                    "dp",
+                    "implementation"
+                ]
+            },
+            "author": {
+                "contestId": 1206,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566135900
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 5,
+            "timeConsumedMillis": 31,
+            "memoryConsumedBytes": 409600
+        },
+        {
+            "id": 59669613,
+            "contestId": 1206,
+            "creationTimeSeconds": 1567092571,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1206,
+                "index": "B",
+                "name": "Make Product Equal One",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 900,
+                "tags": [
+                    "dp",
+                    "implementation"
+                ]
+            },
+            "author": {
+                "contestId": 1206,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566135900
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 5,
+            "timeConsumedMillis": 31,
+            "memoryConsumedBytes": 409600
+        },
+        {
+            "id": 59669252,
+            "contestId": 1206,
+            "creationTimeSeconds": 1567092080,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1206,
+                "index": "B",
+                "name": "Make Product Equal One",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 900,
+                "tags": [
+                    "dp",
+                    "implementation"
+                ]
+            },
+            "author": {
+                "contestId": 1206,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566135900
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 5,
+            "timeConsumedMillis": 30,
+            "memoryConsumedBytes": 409600
+        },
+        {
+            "id": 59666627,
+            "contestId": 1206,
+            "creationTimeSeconds": 1567088722,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1206,
+                "index": "A",
+                "name": "Choose Two Numbers",
+                "type": "PROGRAMMING",
+                "points": 500,
+                "rating": 800,
+                "tags": [
+                    "math",
+                    "sortings"
+                ]
+            },
+            "author": {
+                "contestId": 1206,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566135900
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 25,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59666550,
+            "contestId": 1206,
+            "creationTimeSeconds": 1567088619,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1206,
+                "index": "A",
+                "name": "Choose Two Numbers",
+                "type": "PROGRAMMING",
+                "points": 500,
+                "rating": 800,
+                "tags": [
+                    "math",
+                    "sortings"
+                ]
+            },
+            "author": {
+                "contestId": 1206,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566135900
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 13,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59665307,
+            "contestId": 1204,
+            "creationTimeSeconds": 1567087165,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1204,
+                "index": "B",
+                "name": "Mislove Has Lost an Array",
+                "type": "PROGRAMMING",
+                "points": 750,
+                "rating": 900,
+                "tags": [
+                    "greedy",
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1204,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566311700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 14,
+            "timeConsumedMillis": 31,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59663963,
+            "contestId": 1204,
+            "creationTimeSeconds": 1567085518,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1204,
+                "index": "A",
+                "name": "BowWow and the Timetable",
+                "type": "PROGRAMMING",
+                "points": 500,
+                "rating": 1000,
+                "tags": [
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1204,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566311700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 50,
+            "timeConsumedMillis": 31,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59662170,
+            "contestId": 1207,
+            "creationTimeSeconds": 1567083328,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1207,
+                "index": "B",
+                "name": "Square Filling",
+                "type": "PROGRAMMING",
+                "rating": 1200,
+                "tags": [
+                    "constructive algorithms",
+                    "greedy",
+                    "implementation"
+                ]
+            },
+            "author": {
+                "contestId": 1207,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566484500
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 101,
+            "timeConsumedMillis": 31,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59626298,
+            "contestId": 1208,
+            "creationTimeSeconds": 1567008314,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1208,
+                "index": "A",
+                "name": "XORinacci",
+                "type": "PROGRAMMING",
+                "points": 500,
+                "rating": 900,
+                "tags": [
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1208,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566743700
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 43,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59370932,
+            "contestId": 1207,
+            "creationTimeSeconds": 1566587198,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1207,
+                "index": "A",
+                "name": "There Are Two Types Of Burgers",
+                "type": "PROGRAMMING",
+                "rating": 800,
+                "tags": [
+                    "brute force",
+                    "greedy",
+                    "implementation",
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1207,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566484500
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 7,
+            "timeConsumedMillis": 46,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59370772,
+            "contestId": 1207,
+            "creationTimeSeconds": 1566586941,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1207,
+                "index": "A",
+                "name": "There Are Two Types Of Burgers",
+                "type": "PROGRAMMING",
+                "rating": 800,
+                "tags": [
+                    "brute force",
+                    "greedy",
+                    "implementation",
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1207,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566484500
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 30,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 59369889,
+            "contestId": 1207,
+            "creationTimeSeconds": 1566585530,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1207,
+                "index": "A",
+                "name": "There Are Two Types Of Burgers",
+                "type": "PROGRAMMING",
+                "rating": 800,
+                "tags": [
+                    "brute force",
+                    "greedy",
+                    "implementation",
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1207,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1566484500
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 15,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 58560859,
+            "contestId": 1201,
+            "creationTimeSeconds": 1565502025,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1201,
+                "index": "B",
+                "name": "Zero Array",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 1500,
+                "tags": [
+                    "greedy",
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1201,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1564936500
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 8,
+            "timeConsumedMillis": 171,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 58560581,
+            "contestId": 1201,
+            "creationTimeSeconds": 1565501501,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1201,
+                "index": "B",
+                "name": "Zero Array",
+                "type": "PROGRAMMING",
+                "points": 1000,
+                "rating": 1500,
+                "tags": [
+                    "greedy",
+                    "math"
+                ]
+            },
+            "author": {
+                "contestId": 1201,
+                "members": [
+                    {
+                        "handle": "syed_1"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1564936500
+            },
+            "programmingLanguage": "GNU C++14",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 5,
+            "timeConsumedMillis": 171,
+            "memoryConsumedBytes": 409600
+        }
+    ]
+}
+
+if error 
+
+then 
+output:
+
+{
+    "success": false
+}
+
+====================================================================
+
+http://127.0.0.1:3000/codeforces (get req)
+
+it gives details of own codeforces id
+
+============================================
+
+http://127.0.0.1:3000/codeforces/compare  (post req)
+
+input:
+{
+	"h1":"syed_1",
+	"h2":"sravan1947"
+}
+
+output:
+
+{
+    "success": true,
+    "h1": "syed_1",
+    "h2": "sravan1947",
+    "rating": {
+        "h1": 1434,
+        "h2": 1242
+    },
+    "friends": {
+        "h1": 1,
+        "h2": 2
+    },
+    "contribution": {
+        "h1": 0,
+        "h2": 0
+    },
+    "rank": {
+        "h1": "specialist",
+        "h2": "pupil"
+    },
+    "maxRank": {
+        "h1": "specialist",
+        "h2": "specialist"
+    },
+    "maxRating": {
+        "h1": 1434,
+        "h2": 1401
+    },
+    "contests": {
+        "h1": 1,
+        "h2": 16
+    },
+    "submissions": {
+        "h1": 26,
+        "h2": 89
+    },
+    "accuracy": {
+        "h1": 34,
+        "h2": 41
+    }
+}
+
+if error then:
+
+output:
+
+{
+    "success": false
+}
+
