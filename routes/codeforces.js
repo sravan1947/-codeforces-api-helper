@@ -3,13 +3,17 @@ const express = require('express');
 const passport = require('passport');
 var User = require('../models/user');
 const codeforcesRouter = express.Router();
+const cors = require('./cors');
 codeforcesRouter.use(bodyParser.json());
 var authenticate = require('../authenticate');
 const api = require('../api/codeforces');
 const request = require('request');
 
+codeforcesRouter.options('*', cors.corsWithOptions, (req, res) => {
+    res.sendStatus(200);
+})
 codeforcesRouter.route('/')
-    .get(authenticate.verifyUser, (req, res, next) => {
+    .get(authenticate.verifyUser,cors.corsWithOptions, (req, res, next) => {
         User.findOne({
                 username: req.user.username
             })
@@ -72,7 +76,7 @@ codeforcesRouter.route('/')
     })
 
 codeforcesRouter.route('/')
-    .post(authenticate.verifyUser, (req, res, next) => {
+    .post(authenticate.verifyUser,cors.corsWithOptions, (req, res, next) => {
         User.findOne({
                 username: req.user.username
             })
@@ -136,7 +140,7 @@ codeforcesRouter.route('/')
     })
 
 codeforcesRouter.route('/compare')
-    .post(authenticate.verifyUser, (req, res, next) => {
+    .post(authenticate.verifyUser,cors.corsWithOptions, (req, res, next) => {
         resp = {};
         resp.success = true;
         resp.h1 = req.body.h1;
