@@ -3,13 +3,11 @@ const express=require('express');
 const passport=require('passport');
 var User = require('../models/user');
 const usersRouter = express.Router();
-const cors=require('./cors');
 usersRouter.use(bodyParser.json());
 var authenticate = require('../authenticate');
 
-usersRouter.options('*', cors.corsWithOptions, (req, res) => { res.sendStatus(200); } )
 usersRouter.route('/')
-.get(authenticate.verifyUser,authenticate.verifyAdmin,cors.corsWithOptions,(req,res,next) => {
+.get(authenticate.verifyUser,authenticate.verifyAdmin,(req,res,next) => {
     User.find({})
     .then((users) => {
         res.statusCode = 200;
@@ -19,7 +17,7 @@ usersRouter.route('/')
     .catch((err) => next(err));
 })
 
-usersRouter.post('/signup',cors.corsWithOptions, (req, res, next) => {
+usersRouter.post('/signup', (req, res, next) => {
   User.register(new User({username: req.body.username}), 
     req.body.password, (err, user) => {
     if(err) {
@@ -38,7 +36,7 @@ usersRouter.post('/signup',cors.corsWithOptions, (req, res, next) => {
   });
 });
 
-usersRouter.post('/login',cors.corsWithOptions, (req, res, next) => {
+usersRouter.post('/login', (req, res, next) => {
 
   passport.authenticate('local', (err, user, info) => {
     if (err)
@@ -65,7 +63,7 @@ usersRouter.post('/login',cors.corsWithOptions, (req, res, next) => {
   }) (req, res, next);
 });
 
-usersRouter.get('/checkJWTtoken',cors.corsWithOptions, (req, res) => {
+usersRouter.get('/checkJWTtoken', (req, res) => {
   passport.authenticate('jwt', {session: false}, (err, user, info) => {
     if (err)
       return next(err);
@@ -84,7 +82,7 @@ usersRouter.get('/checkJWTtoken',cors.corsWithOptions, (req, res) => {
   }) (req, res);
 });
 usersRouter.route('/update')
-.post(authenticate.verifyUser,cors.corsWithOptions,(req, res, next) => {
+.post(authenticate.verifyUser,(req, res, next) => {
     User.findOne({username:req.user.username})
     .then((user) => {
         console.log(user);
